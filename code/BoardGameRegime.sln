@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardGameRegime", "BoardGameRegime\BoardGameRegime.csproj", "{23706B1A-204D-4BE8-811A-1DDCC8DCB28D}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BoardGameDB", "BoardGameDB\BoardGameDB.sqlproj", "{1F829A69-A978-46ED-8826-49822242516D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{23706B1A-204D-4BE8-811A-1DDCC8DCB28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23706B1A-204D-4BE8-811A-1DDCC8DCB28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23706B1A-204D-4BE8-811A-1DDCC8DCB28D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F829A69-A978-46ED-8826-49822242516D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F829A69-A978-46ED-8826-49822242516D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F829A69-A978-46ED-8826-49822242516D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1F829A69-A978-46ED-8826-49822242516D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F829A69-A978-46ED-8826-49822242516D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F829A69-A978-46ED-8826-49822242516D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
