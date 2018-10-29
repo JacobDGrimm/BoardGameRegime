@@ -62,5 +62,6 @@
     <Build Include="Game.sql" />
     <Build Include="GameLength.sql" />
     <Build Include="GamePub.sql" />
+    <Build Include="GameDesigner.sql" />
   </ItemGroup>
 </Project>
