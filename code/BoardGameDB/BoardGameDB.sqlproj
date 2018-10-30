@@ -65,5 +65,6 @@
     <Build Include="GameDesigner.sql" />
     <Build Include="GameMechinisms.sql" />
     <Build Include="GameTheme.sql" />
+    <Build Include="GameComplexity.sql" />
   </ItemGroup>
 </Project>
