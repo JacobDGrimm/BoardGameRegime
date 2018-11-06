@@ -67,4 +67,7 @@
     <Build Include="GameTheme.sql" />
     <Build Include="GameComplexity.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="DefaultGames.sql" />
+  </ItemGroup>
 </Project>
