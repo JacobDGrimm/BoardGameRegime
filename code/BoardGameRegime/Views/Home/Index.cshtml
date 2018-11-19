@@ -8,16 +8,16 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Welcome Comrade!</h2>
+        <h2>Welcome, Comrade!</h2>
         <p>
             You can learn more about what we are trying to accomplish with our glorious regime by clicking here.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" @Html.ActionLink("Learn More", "About", "Home")</a></p>
     </div>
     <div class="col-md-4">
         <h2>Game Library</h2>
-        <p>Here is where we can view the games we own. (It's we because all belongs to the glorious state, obviously...)</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <p>Here is where we can view the games we own. (It's "we" because all belongs to the glorious state, obviously...)</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Library", "Index", "List")</a></p>
     </div>
     <div class="col-md-4">
         <h2>Add a game</h2>

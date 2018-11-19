@@ -6,17 +6,16 @@ using System.Web.Mvc;
 
 namespace BoardGameRegime.Controllers
 {
-    public class HomeController : Controller
+    public class ListController : Controller
     {
+        // GET: LIst
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Library()
         {
-            ViewBag.Message = "Would you like to know more?";
-
             return View();
         }
     }
