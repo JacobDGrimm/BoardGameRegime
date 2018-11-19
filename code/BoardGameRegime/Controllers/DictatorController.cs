@@ -6,15 +6,10 @@ using System.Web.Mvc;
 
 namespace BoardGameRegime.Controllers
 {
-    public class ListController : Controller
+    public class DictatorController : Controller
     {
-        // GET: LIst
+        // GET: Dictator
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Add()
         {
             return View();
         }

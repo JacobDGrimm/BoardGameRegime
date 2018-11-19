@@ -22,11 +22,11 @@
     <div class="col-md-4">
         <h2>Add a game</h2>
         <p>Did you get a new game comrade? Well it's time you added it to the People's library.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" @Html.ActionLink("Add a game","Add","List")</a></p>
     </div>
     <div class="col-md-4">
         <h2>Visit the Dictator</h2>
         <p>Click here when its time to get your marching orders from the glorious leader.</p>
-        <p><a class="btn btn-default" @Html.ActionLink("Dictator","","")</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Dictator", "Index", "Dictator")</p>
     </div>
 </div>
