@@ -18,5 +18,10 @@ namespace BoardGameRegime.Controllers
         {
             this.repository = gameRepository;
         }
+
+        public ViewResult List()
+        {
+            return View(repository.Game);
+        }
     }
 }
