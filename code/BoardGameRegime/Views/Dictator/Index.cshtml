@@ -6,8 +6,8 @@
 <h2>Welcome comrade.</h2>
 <p>It's time for your mission...</p>
 
-<p>How much time do you have?</p>
-<p>How many people are playing?</p>
+<p>How much time do you have? @Html.TextBox("GameLength", "Minutes", new { @class = "form-control" })</p>
+<p>How many people are playing? @Html.TextBox("Players", "Number of players", new { @class = "form-control" })</p>
 <p>How complex a game do you want to play?</p>
 <p>What theme do you want to play?</p>
 <p><a class="btn btn-default" @Html.ActionLink("Your game is...", "Game", "Dictator")</a></p>
