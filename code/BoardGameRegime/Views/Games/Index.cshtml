@@ -1,0 +1,87 @@
+﻿@model IEnumerable<BoardGameRegime.Models.Game>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GameLength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinPlayer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxPlayer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecPlayer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mechanism)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Theme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Complexity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GameLength)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinPlayer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxPlayer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecPlayer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mechanism)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Theme)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Complexity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Title }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Title }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Title })
+        </td>
+    </tr>
+}
+
+</table>

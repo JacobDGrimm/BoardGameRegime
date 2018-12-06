@@ -8,7 +8,7 @@ namespace BoardGameRegime.Controllers
 {
     public class ListController : Controller
     {
-        // GET: LIst
+        // GET: List
         public ActionResult Index()
         {
             return View();
