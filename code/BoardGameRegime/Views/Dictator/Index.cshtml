@@ -9,11 +9,11 @@
 
 <p>How much time do you have? @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })</p>
 
-<p>How many people are playing? @Html.TextBox("Players", "Number of players", new { @class = "form-control" })</p>
+<p>How many people are playing? @Html.EditorFor(model => model.Players, new { htmlAttributes = new { @class = "form-control" } })</p>
 
-<p>How complex a game do you want to play? @Html.TextBox("Complexity", "1-5", new { @class = "form-control" })</p>
+<p>How complex a game do you want to play? @Html.EditorFor(model => model.Complexity, new { htmlAttributes = new { @class = "form-control" } })</p>
 
-<p>What theme do you want to play? @Html.TextBox("Theme", "Theme", new { @class = "form-control"})</p> 
+<p>What theme do you want to play? @Html.EditorFor(model => model.Theme, new { htmlAttributes = new { @class = "form-control" } })</p> 
 
 <p><a class="btn btn-default" @Html.ActionLink("Your game is...", "Game", "Dictator")</a></p>
 
