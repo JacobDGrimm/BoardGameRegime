@@ -5,6 +5,9 @@
 }
 
 <h2>Welcome comrade.</h2>
+
+@using (Html.BeginForm())
+{
 <p>It's time for your mission...</p>
 
 <p>How much time do you have? @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })</p>
@@ -15,7 +18,7 @@
 
 <p>What theme do you want to play? @Html.EditorFor(model => model.Theme, new { htmlAttributes = new { @class = "form-control" } })</p> 
 
-<p><a class="btn btn-default" @Html.ActionLink("Your game is...", "Game", "Dictator")</a></p>
-
+<p><input type="submit" value="Index" class="btn btn-default" /></p>
+}
 
 

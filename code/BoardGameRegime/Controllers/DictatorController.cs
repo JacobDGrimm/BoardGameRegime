@@ -9,6 +9,7 @@ namespace BoardGameRegime.Controllers
 {
     public class DictatorController : Controller
     {
+        private GameDbContext db = new GameDbContext();
         // GET: Dictator
         public ActionResult Index()
         {
@@ -19,10 +20,15 @@ namespace BoardGameRegime.Controllers
         public ActionResult Index(Picker picker)
         {
             // query the database for the a game to play
-            return View();
+            var games = (from item in db.Games
+                                  where (item.GameLength < picker.Time) && (item.MinPlayer <= picker.Players) && (item.MaxPlayer >= picker.Players)
+                                  select item);
+
+
+            return View("Game", games);
         }
 
-        public ActionResult Game()
+        public ActionResult Game(Game games)
         {
             return View();
         }
