@@ -15,6 +15,13 @@ namespace BoardGameRegime.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Index(Picker picker)
+        {
+            // query the database for the a game to play
+            return View();
+        }
+
         public ActionResult Game()
         {
             return View();
