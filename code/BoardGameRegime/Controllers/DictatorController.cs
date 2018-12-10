@@ -10,6 +10,7 @@ namespace BoardGameRegime.Controllers
     public class DictatorController : Controller
     {
         private GameDbContext db = new GameDbContext();
+        Random rnd = new Random();
         // GET: Dictator
         public ActionResult Index()
         {
@@ -21,14 +22,14 @@ namespace BoardGameRegime.Controllers
         {
             // query the database for the a game to play
             var games = (from item in db.Games
-                                  where (item.GameLength < picker.Time) && (item.MinPlayer <= picker.Players) && (item.MaxPlayer >= picker.Players)
-                                  select item);
+                                  where (item.GameLength <= picker.Time) && (item.MinPlayer <= picker.Players) && (item.MaxPlayer >= picker.Players)
+                                  select item).ToList();
+            var randomGame = games.ElementAtOrDefault(rnd.Next(0, games.Count()));
 
-
-            return View("Game", games);
+            return View("Game", randomGame);
         }
 
-        public ActionResult Game(Game games)
+        public ActionResult Game()
         {
             return View();
         }
