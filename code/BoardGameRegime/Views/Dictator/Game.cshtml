@@ -4,10 +4,12 @@
     ViewBag.Title = "Game";
 }
 
-<h2>Game</h2>
+<h2>Play this!!</h2>
 
 
-    <p>@Model.Title</p>
+    <h3>@Model.Title</h3>
+    <p>Plays up to @Model.MaxPlayer</p>
+    <p>@Model.GameLength minutes</p>
 
-
+<p>@Html.ActionLink("Try Again","Index","Dictator")</p>
 
