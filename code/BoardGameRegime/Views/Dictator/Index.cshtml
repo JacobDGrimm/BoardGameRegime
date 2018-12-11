@@ -10,9 +10,12 @@
 {
 <p>It's time for your mission...</p>
 
-<p>How much time do you have? @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })</p>
+
+<p>    How much time do you have? @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })</p>
+    @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
 
 <p>How many people are playing? @Html.EditorFor(model => model.Players, new { htmlAttributes = new { @class = "form-control" } })</p>
+@Html.ValidationMessageFor(model => model.Players, "", new { @class = "text-danger" })
 
 <p>How complex a game do you want to play? @Html.EditorFor(model => model.Complexity, new { htmlAttributes = new { @class = "form-control" } })</p>
 
