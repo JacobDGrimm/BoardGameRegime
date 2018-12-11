@@ -24,13 +24,24 @@ namespace BoardGameRegime.Controllers
             var games = (from item in db.Games
                                   where (item.GameLength <= picker.Time) && (item.MinPlayer <= picker.Players) && (item.MaxPlayer >= picker.Players)
                                   select item).ToList();
+            if (games.Count() == 0)
+            {
+                return View("NoGame");
+            }
+            else
+            {
+                var randomGame = games.ElementAtOrDefault(rnd.Next(0, games.Count()));
 
-            var randomGame = games.ElementAtOrDefault(rnd.Next(0, games.Count()));
-
-            return View("Game", randomGame);
+                return View("Game", randomGame);
+            }
         }
 
         public ActionResult Game()
+        {
+            return View();
+        }
+
+        public ActionResult NoGame()
         {
             return View();
         }

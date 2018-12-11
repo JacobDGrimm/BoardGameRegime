@@ -11,6 +11,7 @@ namespace BoardGameRegime.Models
     public class Game
     {
         [Key]
+        [Required(ErrorMessage ="Title is required")]
         public string Title { get; set; }
         public int GameLength { get; set; }
         public string Publisher { get; set; }
