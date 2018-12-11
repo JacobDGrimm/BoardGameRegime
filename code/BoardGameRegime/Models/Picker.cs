@@ -10,6 +10,7 @@ namespace BoardGameRegime.Models
     {
         public int Time { get; set; }
         public int Players { get; set; }
+        [Range(0, 5)]
         public int Complexity { get; set; }
         public string Theme { get; set; }
     }
