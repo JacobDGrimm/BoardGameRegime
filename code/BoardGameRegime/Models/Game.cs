@@ -21,6 +21,7 @@ namespace BoardGameRegime.Models
         public int RecPlayer { get; set; }
         public string Mechanism { get; set; }
         public string Theme { get; set; }
+        [Range(0,5)]
         public int Complexity { get; set; }
     }
 
