@@ -25,7 +25,8 @@
         </div>
 
         <div class="form-group">
-            <p>How complex a game do you want to play? @Html.EditorFor(model => model.Complexity, new { htmlAttributes = new { @class = "form-control" } })</p>
+            <p>How complex a game do you want to play? @Html.EditorFor(model => model.Complexity, new { htmlAttributes = new { @class = "form-control", @Value = 0, min = 0, max = 5 } })</p>
+            @Html.ValidationMessageFor(model => model.Complexity, "", new { @class = "text-danger" })
         </div>
 
         <div class="form-group">
