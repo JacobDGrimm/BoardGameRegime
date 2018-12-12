@@ -30,6 +30,10 @@
         </div>
 
         <div class="form-group">
+            <p>What kind of theme do you want?@Html.DropDownListFor(m => m.ThemeId, new SelectList(ViewBag.Theme, "ThemeId", "Theme"), new { @class = "form-control" })</p>
+        </div>
+
+        <div class="form-group">
             <p><input type="submit" value="Your game is..." class="btn btn-default" /></p>
         </div>
 
