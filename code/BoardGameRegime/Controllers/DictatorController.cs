@@ -74,6 +74,17 @@ namespace BoardGameRegime.Controllers
                              select item).ToList();
                 }
 
+                var recPlayer = (from item in games
+                                 where (item.RecPlayer == picker.Players)
+                                 select item).ToList();
+
+                if (recPlayer.Count() != 0)
+                {
+                    var randomRecPlayer = recPlayer.ElementAtOrDefault(rnd.Next(0, recPlayer.Count()));
+
+                    return View("Game", randomRecPlayer);
+                }
+
                 if (games.Count() == 0)
                 {
                     return View("NoGame");
