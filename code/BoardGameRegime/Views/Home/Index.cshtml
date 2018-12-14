@@ -7,28 +7,39 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Welcome, Comrade!</h2>
-        <p>
-            You can learn more about what we are trying to accomplish with our glorious regime by clicking here.
-        </p>
-        <p><a class="btn btn-default" @Html.ActionLink("Learn More", "About", "Home")</a></p>
+    <div class="row">
+
+        <div class="col-md-4">
+            <h2>Welcome, Comrade!</h2>
+            <p>
+                You can learn more about what we are trying to accomplish with our glorious regime by clicking here.
+            </p>
+            <p><a class="btn btn-default" @Html.ActionLink("Learn More", "About", "Home")</a></p>
+        </div>
+
+        <div class="col-md-4">
+            <h2>Game Library</h2>
+            <p>Here is where we can view the games we own. (It's "we" because all belongs to the glorious state, obviously...)</p>
+            <p><a class="btn btn-default" @Html.ActionLink("Library", "Index", "Games")</a></p>
+        </div>
+        
     </div>
-    <div class="col-md-4">
-        <h2>Game Library</h2>
-        <p>Here is where we can view the games we own. (It's "we" because all belongs to the glorious state, obviously...)</p>
-        <p><a class="btn btn-default" @Html.ActionLink("Library", "Index", "Games")</a></p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Add a game</h2>
+            <p>Did you get a new game comrade? Well it's time you added it to the People's library.</p>
+            <p>@Html.ActionLink("Add a game", "Create", new { controller = "Games" }, new { @class = "btn btn-default" })</p>
+        </div>
+
+        <div class="col-md-4">
+            <h2>Visit the Dictator</h2>
+            <p>Click here when its time to get your marching orders from the glorious leader.</p>
+            <p><a class="btn btn-default" @Html.ActionLink("Dictator", "Index", "Dictator")</a></p>
+        </div>
+        <div class="col-md-push-2">
+            <img src="~/Robots/BGRcaeser.jpg" />
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Add a game</h2>
-        <p>Did you get a new game comrade? Well it's time you added it to the People's library.</p>
-        <p>@Html.ActionLink("Add a game", "Create", new { controller = "Games" }, new { @class = "btn btn-default" })</p>
-    </div>
-    <div class="col-md-4">
-        <h2>Visit the Dictator</h2>
-        <p>Click here when its time to get your marching orders from the glorious leader.</p>
-        <p><a class="btn btn-default" @Html.ActionLink("Dictator", "Index", "Dictator")</a></p>
-    </div>
+    
 </div>

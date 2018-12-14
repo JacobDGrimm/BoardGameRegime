@@ -174,9 +174,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Robots\BGRcaeser.jpg" />
     <Content Include="Robots\BGRCastro.jpg" />
     <Content Include="Robots\BGRgaddafi.jpg" />
+    <Content Include="Robots\BGRKahn.jpg" />
     <Content Include="Robots\BGRKJU.jpg" />
+    <Content Include="Robots\BGRnapolean.jpg" />
+    <Content Include="Robots\BGRReviution.jpg" />
     <Content Include="Robots\BGRstalin.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
