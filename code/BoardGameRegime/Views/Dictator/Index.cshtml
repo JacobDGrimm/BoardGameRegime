@@ -10,33 +10,38 @@
 {
 
     <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>It's time for your mission...</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <p>How much time do you have? @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })</p>
+                    @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+                </div>
 
-        <h4>It's time for your mission...</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            <p>How much time do you have? @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })</p>
-            @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <p>How many people are playing? @Html.EditorFor(model => model.Players, new { htmlAttributes = new { @class = "form-control" } })</p>
+                    @Html.ValidationMessageFor(model => model.Players, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <p>How complex a game do you want to play? @Html.EditorFor(model => model.Complexity, new { htmlAttributes = new { @class = "form-control", @Value = 0, min = 0, max = 5 } })</p>
+                    @Html.ValidationMessageFor(model => model.Complexity, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <p>What kind of theme do you want?@Html.DropDownListFor(m => m.ThemeId, new SelectList(ViewBag.Theme, "ThemeId", "Theme"), new { @class = "form-control" })</p>
+                </div>
+
+                <div class="form-group">
+                    <p><input type="submit" value="Your game is..." class="btn btn-default" /></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="~/Robots/BGRstalin.jpg" />
+            </div>
         </div>
-
-        <div class="form-group">
-            <p>How many people are playing? @Html.EditorFor(model => model.Players, new { htmlAttributes = new { @class = "form-control" } })</p>
-            @Html.ValidationMessageFor(model => model.Players, "", new { @class = "text-danger" })
-        </div>
-
-        <div class="form-group">
-            <p>How complex a game do you want to play? @Html.EditorFor(model => model.Complexity, new { htmlAttributes = new { @class = "form-control", @Value = 0, min = 0, max = 5 } })</p>
-            @Html.ValidationMessageFor(model => model.Complexity, "", new { @class = "text-danger" })
-        </div>
-
-        <div class="form-group">
-            <p>What kind of theme do you want?@Html.DropDownListFor(m => m.ThemeId, new SelectList(ViewBag.Theme, "ThemeId", "Theme"), new { @class = "form-control" })</p>
-        </div>
-
-        <div class="form-group">
-            <p><input type="submit" value="Your game is..." class="btn btn-default" /></p>
-        </div>
-
     </div>
 }
 
