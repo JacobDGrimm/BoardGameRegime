@@ -32,13 +32,14 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Board Game Regime</p>
-        </footer>
+        
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
+<footer>
+    <p>&copy; @DateTime.Now.Year - Board Game Regime</p>
+</footer>
 </html>
