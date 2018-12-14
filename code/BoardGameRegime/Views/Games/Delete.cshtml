@@ -10,95 +10,104 @@
 <div>
     <h4>Game</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        
-        <dt>
-            @Html.DisplayNameFor(model => model.GameLength)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.GameLength)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.GameLength)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Publisher)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.GameLength)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Publisher)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Publisher)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Designer)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Publisher)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Designer)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Designer)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MinPlayer)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Designer)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MinPlayer)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.MinPlayer)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MaxPlayer)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.MinPlayer)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MaxPlayer)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.MaxPlayer)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RecPlayer)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.MaxPlayer)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.RecPlayer)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.RecPlayer)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Mechanism)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.RecPlayer)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Mechanism)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Mechanism)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Theme)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Mechanism)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Theme)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Theme)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Complexity)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Theme)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Complexity)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Complexity)
+                </dt>
 
-    </dl>
+                <dd>
+                    @Html.DisplayFor(model => model.Complexity)
+                </dd>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+            </dl>
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            }
+            <div class="col-md-2">
+                <img src="~/Robots/BGRKahn.jpg" />
+            </div>
         </div>
-    }
+    </div>
 </div>
