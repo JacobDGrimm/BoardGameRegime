@@ -2,8 +2,13 @@
 @{
     ViewBag.Title = "NoGame";
 }
+<div class="col-md-6">
+    <h2>There is no game matching those game parameters</h2>
+    @Html.ActionLink("Try Again", "Index", "Dictator")
 
-<h2>There is no game matching those game parameters</h2>
 
-@Html.ActionLink("Try Again","Index","Dictator")
+</div>
+<div class="col-md-3">
+    <img src="~/Robots/BGRReviution.jpg" />
+</div>
 
